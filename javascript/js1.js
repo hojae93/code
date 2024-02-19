@@ -2,12 +2,14 @@
 document.querySelectorAll('.nav_item').forEach(item => {
     item.addEventListener('mouseover', function() {
       this.querySelector('a').style.fontSize = "1.3em"; /* hover 시 폰트 크기 증가 */
+      this.classList.add('menushow');
     });
 
     item.addEventListener('mouseout', function() {
       this.querySelector('a').style.fontSize = "1em"; /* hover 끝나면 폰트 크기 원래대로 */
+      this.classList.remove('menushow'); 
     });
-  });
+});
 
 // 한글자씩 표시되도록 타이핑 효과 주기
 

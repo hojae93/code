@@ -5,24 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"/>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <script src="javascript/swiper-bundle.min.js"></script>
-
-    <script src="javascript/index.js"></script>
-
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
     <title>Document</title>
 </head>
 <body>
     <div class="progress"></div>
     <!-- header -->
     <header>
-        <div class="Header_container">
-            <div class="logo"><a href="/"><img src="images/logo.png" alt=""></a></div>
+        <div class="header_container">
+            <div class="logo"><a href="/"><img src="images/logo.png" alt="logo"></a></div>
             <nav class="menu">
                 <ul>
-                    <li class="nav_item menushow"><a href="#">INTRO</a></li>
+                    <li class="nav_item"><a href="#">INTRO</a></li>
                     <li class="nav_item"><a href="#">ABOUT</a></li>
                     <li class="nav_item"><a href="#">STACKS</a></li>
                     <li class="nav_item"><a href="#">WORKS</a></li>
@@ -83,86 +78,13 @@
     </section>
         <!-- Stacks -->
     <section id="Stacks">
-        <div class="Stacks-container">
+        <div class="stacks-container">
             <h1>TECH STACK</h1>
             <h2>아이콘에 마우스를 올리면 자세한 설명이 나옵니다.</h2>
-            <div class="Stacks_main">            
-                <div id="frontendStack" class="stack_wrap1">
-                    <div class="subTitle">
-                        <span># FRONT-END SKILL</span>
-                    </div>    
-                    <div class="stack_container">
-                        <ul>
-                            <li>
-                                <img src="images/html5.png" alt="HTML5">
-                                <div>
-                                    <p>HTML5</p>
-                                    <p>웹접근성, 표준성을 준수하며 시멘틱태그를 이용해 마크업 할 수 있습니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/css3.png" alt="CSS3">
-                                <div>
-                                    <p>CSS3</p>
-                                    <p>position, display를 적절히 사용하여 반응형웹을 적용할 수 있습니다.</p>
-                                </div>
-                            </li>                            
-                            <li>
-                                <img src="images/js.png" alt="JS">
-                                <div>
-                                    <p>Javascript</p>
-                                    <p>Javascript의 배열, 메소드, DOM을 이해하며 다양한 상황에 적용할 수 있습니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/jquery.png" alt="JQuery">
-                                <div>
-                                    <p>JQuery</p>
-                                    <p>관련 라이브러리와 애니메이션, 여러 메소드들을 잘 활용할 수 있습니다.</p>
-                                </div>
-                            </li>                      
-                        </ul>
-                    </div>
-                </div>
+            <div class="stack-container">
 
-                <div id="toolStack" class="stack_wrap2">
-                    <div class="subTitle">
-                        <span># USING TOOL</span>
-                    </div>
-                    <div class="stack_container">
-                        <ul>
-                            <li>
-                                <img src="images/vscode.png" alt="VisualStudio code">
-                                <div>
-                                    <p>VS Code</p>
-                                    <p>주로 사용하는 코딩툴이며, 코딩에 편리한 확장프로그램들을 설치해 사용하고 있습니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/figma.png" alt="Figma">
-                                <div>
-                                    <p>Figma</p>
-                                    <p>데스크톱, 모바일 UI/UX 시안을 작업 할 수 있으며, 디버깅을 잘 활용할 수 있습니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/photoshop.png" alt="photoshop">
-                                <div>
-                                    <p>PHOTOSHOP</p>
-                                    <p>마스크효과, 레이어 활용 등을 이용해 다양한 그래픽 요소를 제작할 수 있습니다.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/git.png" alt="Git">
-                                <div>
-                                    <p>Git</p>
-                                    <p>commit, push, pull, clone 등 git 명령어를 사용하여 레파지토리에 접근할 수 있습니다.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>                                
+            </div>
+                                           
         </div>
     </section>
         <!-- Works -->
@@ -204,31 +126,32 @@
         </div>           
     </section>
         <!-- Contact -->
-        <section id="Contact">
-            <div class="Contact_container">                
-                <h1>CONTACT</h1>
-                <div class="Contact_main">
-                <div class="Contact_wrap">
-                    <p>PHONE : 010 2956 3468</p>
-                    <P>E-MAIL : id931005@naver.com</P>
-                    <P>INSTARGRAM : </P>
-                    <P>GITHUB : https://github.com/hojae93</P>                    
-                </div>
-                <ul class="social_wrap">
-                    <li><a href="#"><img src="images/instagram.png" alt="INSTARGRAM"></a></li>
-                    <li><a href="#"><img src="images/github.png" alt="GITHUB"></a></li>                    
-                    <li><a href="#"><img src="images/facebook.png" alt="FACEBOOK"></a></li>
-                </ul>
-                <div class="copyright">
-                    <p>Copyright ⓒ 2024. HoJae All rights reserved</p>
-                </div>               
-                </div>
+    <section id="Contact">
+        <div class="Contact_container">                
+            <h1>CONTACT</h1>
+            <div class="Contact_main">
+            <div class="Contact_wrap">
+                <p>PHONE : 010 2956 3468</p>
+                <P>E-MAIL : id931005@naver.com</P>
+                <P>INSTARGRAM : </P>
+                <P>GITHUB : https://github.com/hojae93</P>                    
             </div>
-        </section>
-    </div>
-    <!-- Custom -->
-    <div class="fp-right"></div>
+            <ul class="social_wrap">
+                <li><a href="#"><img src="images/instagram.png" alt="INSTARGRAM"></a></li>
+                <li><a href="#"><img src="images/github.png" alt="GITHUB"></a></li>                    
+                <li><a href="#"><img src="images/facebook.png" alt="FACEBOOK"></a></li>
+            </ul>
+            <div class="copyright">
+                <p>Copyright ⓒ 2024. HoJae All rights reserved</p>
+            </div>               
+            </div>
+        </div>
+    </section>
+    
+
 
     <script src="javascript/js1.js"></script>
+    <script src="javascript/swiper-bundle.min.js"></script>
+    <script src="javascript/index.js"></script>
 </body>
 </html>

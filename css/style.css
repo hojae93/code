@@ -1,21 +1,20 @@
 * { padding: 0; margin:0; -webkit-tap-highlight-color: transparent; } 
 a { text-decoration: none; color:inherit; } 
 body { font-size: 16px; font-weight:500; color:white; background-color: rgb(21, 24, 27); font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; } 
-
 section { height: 100vh; } 
-
 li { list-style: none; } 
 /* 진척도 */
 .progress { width:0%; height:5px; position: fixed; z-index: 1000; background: white; } 
 
 /* Header */
-header { position: fixed; width:100%; height:70px; top:0; box-sizing: border-box; z-index: 9999; } 
-header .Header_container { width:100%; height:100%; padding:0 50px; margin:0 auto; color: white; z-index: 9999; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; margin-top: 30px; } 
-header .Header_container .logo {width: 60px;}
-header .Header_container .logo img {width: 100%;}
-header .Header_container .menu ul { display:flex; gap:0 30px; justify-content: flex-end; } 
-header .Header_container .menu .nav_item { padding: 25px 10px 10px 10px; overflow: hidden; cursor: pointer; transition: font-size 0.8s ease; font-weight: 900; } 
-.menushow { border-bottom: 3px white solid; } 
+header { position: fixed; width:100%; top:0; box-sizing: border-box; z-index: 9999; } 
+header .header_container { width:100%; height:100%; padding:0 50px; margin:0 auto; color: white; z-index: 9999; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; margin-top: 30px;} 
+header .header_container .logo { width: 60px; }
+header .header_container .logo img { width: 100%; }
+header .header_container .menu ul { display:flex; gap:0 30px; justify-content: flex-end; } 
+header .header_container .menu ul li { padding: 25px 10px 10px 10px; overflow: hidden; cursor: pointer; font-weight: 900;}
+header .header_container .menu ul li a{ transition: all 1s; }
+header .header_container .menu ul .nav_item.menushow { border-bottom: 3px white solid; transition: all 1s; } 
 
 /* Intro */
 .Intro_container { position: relative; display: flex; align-items: center; justify-content: center; height: 100vh; background: url(../images/sec02_bg01.jpg) } 
@@ -26,17 +25,18 @@ header .Header_container .menu .nav_item { padding: 25px 10px 10px 10px; overflo
 .Intro_container .scroll div:nth-child(2) { animation: scrolldown 1300ms linear infinite; } 
 .Intro_container .scroll p { color: white; opacity: 0.8; font-size:0.8rem; font-weight: 300; } 
 
-@keyframes gradient { 
- 0% { background-position: 0% 50%; } 
- 50% { background-position: 100% 50%; } 
- 100% { background-position: 0% 50%; } 
- }
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; } 
+}
 
-@keyframes scrolldown { 
- 0% { top: 18px; opacity: 0; } 
- 50% { top: 35px; opacity: 0.3; } 
- 100% { top: 50px; opacity: 0; } 
- }
+@keyframes scrolldown {
+    0% { top: 18px; opacity: 0; } 
+    50% { top: 35px; opacity: 0.3; }
+    100% { top: 50px; opacity: 0; }     
+}
+
 /* About */
 #About { background: url(../images/visual.png) center no-repeat #121212; margin-top: 1px; } 
 #About > h1 { width:100%; text-align: center; font-size: 2.7rem; font-weight: 900; color: rgba(255,255,255,.5); z-index: 50; padding-top: 80px; } 
