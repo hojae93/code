@@ -4,7 +4,6 @@ document.querySelectorAll('.nav_item').forEach(item => {
       this.querySelector('a').style.fontSize = "1.3em"; /* hover 시 폰트 크기 증가 */
       this.classList.add('menushow');
     });
-
     item.addEventListener('mouseout', function() {
       this.querySelector('a').style.fontSize = "1em"; /* hover 끝나면 폰트 크기 원래대로 */
       this.classList.remove('menushow'); 
@@ -61,88 +60,21 @@ window.addEventListener('scroll', function(){
     var progress = pagescroll / (pageheight - pagerealheight) * 100
     document.querySelector('.progress').style.width = progress + '%'; //-- 진척도 알려주기
     if(progress >= 10){
-        var menucount = 0;
-        var 메뉴밑줄 = document.querySelectorAll('.nav_item')[menucount].classList.add('menushow');
-        var 메뉴밑줄제거 = document.querySelectorAll('.nav_item')[menucount].classList.remove('menushow');  
-        setTimeout(function() {
-            메뉴밑줄제거
-        }, 500);
-        menucount++;        
-        setTimeout(function(){
-            메뉴밑줄
-        }, 1000)
-        var containerAbout = document.querySelector('.About_container');
-        var titleAbout = document.querySelector('.About_title');
-        var mainAbout = document.querySelector('.About_main');
-        var leftAbout = document.querySelector('.About_left');
-        var rightAbout = document.querySelector('.About_right');
+        var containerAbout = document.querySelector('.about_container');
+        var titleAbout = document.querySelector('.about_title');
+        var mainAbout = document.querySelector('.about_main');
+        var textAbout = document.querySelector('.about_text');
         containerAbout.classList.add('show');
         setInterval(function(){
             titleAbout.classList.add('show');
         }, 500);
-            setInterval(function(){
+        setInterval(function(){
             mainAbout.classList.add('show');
-             }, 1000);
-                setTimeout(function() {
-            leftAbout.classList.add('show');
-                 }, 1000); // 0.5초 후에 main_left가 나타남
-                setTimeout(function() {
-                rightAbout.classList.add('show');
-                        }, 1500); // 1초 후에 main_right가 나타남
+        }, 1000);
+        setTimeout(function() {
+            textAbout.classList.add('show');
+        }, 1000); // 0.5초 후에 main_left가 나타남
+                
     }            
 });
 
-// WORk에 들어오면 항목 띄우기
-// Contact에 들어오면 항목 띄우기
-var containerStack = document.querySelector('.Stacks_container');
-// top_main 요소 가져오기
-var topStack = document.querySelector('#Stacks');
-// main_1 요소 가져오기
-var mainStack = document.querySelector('.Stacks_main');
-// main_left 요소 가져오기
-var FirstStack = document.querySelector('.stack_wrap1');
-// main_right 요소 가져오기
-var SecondStack = document.querySelector('.stack_wrap2');
-
-var containerContact = document.querySelector('.Contact_container');
-// top_main 요소 가져오기
-var topContact = document.querySelector('#Contact');
-// main_1 요소 가져오기
-var mainContact = document.querySelector('.Contact_main');
-// main_left 요소 가져오기
-var FirstContact = document.querySelector('.Contact_wrap');
-// main_right 요소 가져오기
-var SecondContact = document.querySelector('.social_wrap');
-var ThirdContact = document.querySelector('.copyright');
-
-
-// 스크롤 이벤트 리스너 등록
-window.addEventListener('scroll', function() {
-    // top_main 요소가 화면에 나타나는지 확인
-    var topStackRect = topStack.getBoundingClientRect();
-    var topContactRect = topContact.getBoundingClientRect();
-    // top_main 요소가 화면에 보이면 main_1에 show 클래스 추가
-    if (topStackRect.top < window.innerHeight) {
-        mainStack.classList.add('show');
-        // 순차적으로 main_left와 main_right가 나타나도록 함
-        setTimeout(function() {
-            FirstStack.classList.add('show');
-        }, 1000); // 0.5초 후에 main_left가 나타남
-        setTimeout(function() {
-            SecondStack.classList.add('show');
-        }, 1500); // 1초 후에 main_right가 나타남
-    }
-    if (topContactRect.top < window.innerHeight) {
-        mainContact.classList.add('show');
-        // 순차적으로 main_left와 main_right가 나타나도록 함
-        setTimeout(function() {
-            FirstContact.classList.add('show');
-        }, 500); // 0.5초 후에 main_left가 나타남
-        setTimeout(function() {
-            SecondContact.classList.add('show');
-        }, 1000); // 1초 후에 main_right가 나타남
-        setTimeout(function() {
-            ThirdContact.classList.add('show');
-        }, 1500); // 1.5초 후에 third가 나타남
-    }
-});
