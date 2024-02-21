@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Animation</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end; /* 오른쪽 정렬 */
+    }
+
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .navbar li {
+        margin-right: 20px;
+    }
+
+    .navbar li a {
+        color: black; /* 링크 색상을 검은색으로 지정 */
+        text-decoration: none; /* 텍스트 장식 제거 */
+    }
+
+    section {
+        padding-top: 50px; /* navbar 높이만큼 여백 추가 */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .intro {
+        background-color: #1abc9c;
+    }
+
+    .about {
+        background-color: #3498db;
+    }
+
+    .stack {
+        background-color: #9b59b6;
+    }
+
+    .work {
+        background-color: #f1c40f;
+    }
+
+    .contact {
+        background-color: #e74c3c;
+    }
+
+    .item {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .item.show {
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="intro" class="intro">
+        <h2 class="item">Intro</h2>
+    </section>
+    <section id="about" class="about">
+        <h2 class="item">About</h2>
+    </section>
+    <section id="stack" class="stack">
+        <h2 class="item">Stack</h2>
+    </section>
+    <section id="work" class="work">
+        <h2 class="item">Work</h2>
+    </section>
+    <section id="contact" class="contact">
+        <h2 class="item">Contact</h2>
+    </section>
+
+<script>
+    var showClass = 'show';
+
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY;
+        var windowHeight = window.innerHeight;
+
+        var items = document.querySelectorAll('.item');
+
+        items.forEach(function(item) {
+            var itemPosition = item.getBoundingClientRect();
+            var itemVisible = itemPosition.top < windowHeight && itemPosition.bottom >= 0;
+
+            if (itemVisible) {
+                item.classList.add(showClass);
+            } else {
+                item.classList.remove(showClass);
+            }
+        });
+    });
+</script>
+</body>
+</html>

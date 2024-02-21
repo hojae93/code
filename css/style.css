@@ -13,8 +13,8 @@ header .header_container .logo { width: 60px; }
 header .header_container .logo img { width: 100%; }
 header .header_container .menu ul { display:flex; gap:0 30px; justify-content: flex-end; } 
 header .header_container .menu ul li { padding: 25px 10px 10px 10px; overflow: hidden; cursor: pointer; font-weight: 900;}
-header .header_container .menu ul li a{ transition: all 1s; }
-header .header_container .menu ul .nav_item.menushow { border-bottom: 3px white solid; transition: all 1s; } 
+header .header_container .menu ul li a{ transition: all .5s; }
+header .header_container .menu ul .nav_item.menushow { border-bottom: 3px white solid; transition: all .5s; } 
 
 /* Intro */
 .Intro_container { position: relative; display: flex; align-items: center; justify-content: center; height: 100vh; background: url(../images/sec02_bg01.jpg) } 
@@ -71,7 +71,7 @@ header .header_container .menu ul .nav_item.menushow { border-bottom: 3px white 
 #Stacks .stacks-container .stack-container ul li { display:flex; gap: 40px; align-items: center; justify-content: center; padding:30px ; border: 1px solid #555454; border-radius: 10px; position: relative; transition: all 0.3s ease; overflow: hidden; background: rgb(39, 39, 39);}
 #Stacks .stacks-container .stack-container ul li:hover {padding-right: 200px;}
 #Stacks .stacks-container .stack-container ul li a img { width: 70px; height: 70px; } 
-#Stacks .stacks-container .stack-container ul li .stack-text { position: absolute; left: 140px; display:flex; justify-content: center ; flex-direction: column; width: 180px; height: 100%; transition: all 0.8 ease; }
+#Stacks .stacks-container .stack-container ul li .stack-text { position: absolute; left: 140px; display:flex; justify-content: center ; flex-direction: column; width: 180px; height: 100%; transition: all .5s ease; }
 #Stacks .stacks-container .stack-container ul li:hover .stack-text {left: 110px;}
 #Stacks .stacks-container .stack-container ul li .stack-text p { padding-left: 20px; padding-bottom: 5px; }
 #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 1.2rem; font-weight: 800; }
@@ -97,9 +97,6 @@ header .header_container .menu ul .nav_item.menushow { border-bottom: 3px white 
 #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div span { border: 1px solid #d6d6d6; padding: 5px 10px; border-radius: 15px; margin-right: 10px; font-size:0.9rem; font-weight: 600;}
 #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom {padding-top: 15px;}
 #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom a { background: rgb(92, 92, 92); padding: 10px 20px; border-radius: 10px; }
-
-
-
 #works .swiper-button-prev,
 #works .swiper-button-next { width: 40px; height: 40px; color: #000; background: #111; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px; font-size: 14px; top: 50%; transform: translateY(-50%); margin: 5px 0 0; } 
 #works .swiper-button-prev { left: -70px; } 

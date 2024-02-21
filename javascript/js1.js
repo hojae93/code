@@ -58,8 +58,9 @@ window.addEventListener('scroll', function(){
     var pageheight = document.querySelector('html').scrollHeight;
     var pagerealheight = document.querySelector('html').clientHeight;
     var progress = pagescroll / (pageheight - pagerealheight) * 100
+    console.log(progress);
     document.querySelector('.progress').style.width = progress + '%'; //-- 진척도 알려주기
-    if(progress >= 10){
+    if(progress >= 16){
         var containerAbout = document.querySelector('.about_container');
         var titleAbout = document.querySelector('.about_title');
         var mainAbout = document.querySelector('.about_main');
