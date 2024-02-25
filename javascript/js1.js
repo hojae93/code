@@ -10,8 +10,31 @@ document.querySelectorAll('.nav-item').forEach(item => {
     });
 });
 
-// 한글자씩 표시되도록 타이핑 효과 주기
+// 메뉴 클릭시 스크롤 이동 스무스하게
+document.addEventListener('DOMContentLoaded', function() {
+    var smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
+    smoothScrollLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // 기본 이벤트(링크 이동) 방지
+            var targetId = link.getAttribute('href');
+            var targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // 스크롤 위치를 부드럽게 이동
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });    
+});
 
+// 모바일 햄버거 메뉴 
+var hamburger = document.querySelector('.nav-hamburger');
+function toggleMenu() {    
+    hamburger.classList.toggle('open');
+    document.querySelector('#mb-menu').classList.toggle('opening');
+}
+hamburger.addEventListener('click', toggleMenu);
+
+// 한글자씩 표시되도록 타이핑 효과 주기
 var lines = [
     { text: "WEB-DEVELOPER", fontSize: "8.0rem", fontWeight: "900", color: '#ffffff' }, // 첫 번째 줄에는 letter-spacing을 적용하지 않음
     { text: "PORTFOLIO", fontSize: "2.2rem", fontWeight: "900", color: '#ffffff', letterSpacing: "1.6rem" } // 두 번째 줄에만 letter-spacing을 적용
@@ -45,7 +68,7 @@ function typeWriter() {
             charIndex = 0;
             lineIndex++;
             setTimeout(typeWriter, 1000);
-        }
+        }      
     }
 }
 
@@ -53,21 +76,8 @@ window.onload = function() {
     typeWriter();
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    var smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
-    smoothScrollLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault(); // 기본 이벤트(링크 이동) 방지
-            var targetId = link.getAttribute('href');
-            var targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // 스크롤 위치를 부드럽게 이동
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-});
 
+// 진척도 + 나타나기 
 window.addEventListener('scroll', function(){
     var pagescroll = window.scrollY;
     var pageheight = document.querySelector('html').scrollHeight;
@@ -100,7 +110,7 @@ window.addEventListener('scroll', function(){
                 // 각 요소를 0.5초씩 차이를 두고 나타나도록 설정
                 setTimeout(function() {
                     item.classList.add('show');
-                }, index * 500);
+                }, index * 1000);
             });
         } else {
             // 현재 섹션이 화면에 보이지 않을 때
