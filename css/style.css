@@ -183,10 +183,6 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
     #Stacks .stacks-container .stack-container ul { flex-direction: column; width: 90px; }
     #Stacks .stacks-container .stack-container ul li { justify-content: unset; }
     #Stacks .stacks-container .stack-container ul li a img { width: 30px; height: 30px; }
-    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 0px; }
-    #Stacks .stacks-container .stack-container ul li:hover .stack-text {left: 0px;}
-    #Stacks .stacks-container .stack-container ul li:active { padding-right: 240px; }
-    #Stacks .stacks-container .stack-container ul li:active .stack-text {left: 80px;}
     #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 1.0rem; font-weight: 800; }  
     #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.8rem; font-weight: 400; } 
 }
