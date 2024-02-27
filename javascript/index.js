@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-button-prev',
             // 다음 버튼의 CSS 선택자를 지정합니다.
             nextEl: '.swiper-button-next',
-        }
+        }        
     });
 });
