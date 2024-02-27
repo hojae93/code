@@ -34,49 +34,6 @@ function toggleMenu() {
 }
 hamburger.addEventListener('click', toggleMenu);
 
-// 한글자씩 표시되도록 타이핑 효과 주기
-var lines = [
-    { text: "WEB-DEVELOPER", fontSize: "8.0rem", fontWeight: "900", color: '#ffffff' }, // 첫 번째 줄에는 letter-spacing을 적용하지 않음
-    { text: "PORTFOLIO", fontSize: "2.2rem", fontWeight: "900", color: '#ffffff', letterSpacing: "1.6rem" } // 두 번째 줄에만 letter-spacing을 적용
-];
-
-var lineIndex = 0;
-var charIndex = 0;
-
-function typeWriter() {
-    if (lineIndex < lines.length) {
-        var line = lines[lineIndex];
-        var text = line.text;
-        var fontSize = line.fontSize;
-        var fontWeight = line.fontWeight;
-        var color = line.color;
-        var letterSpacing = line.letterSpacing || "normal"; // letter-spacing 값을 가져오고, 값이 없으면 "normal"을 사용합니다.
-
-        if (charIndex < text.length) {
-            var char = text.charAt(charIndex);
-            var span = document.createElement('span');
-            span.style.fontSize = fontSize;
-            span.style.fontWeight = fontWeight;
-            span.style.color = color;            
-            span.style.letterSpacing = letterSpacing; // letter-spacing을 적용합니다.
-            span.textContent = char;
-            document.getElementById('typo-1').appendChild(span);
-            charIndex++;
-            setTimeout(typeWriter, 100);
-        } else {
-            document.getElementById('typo-1').innerHTML += "<br>";
-            charIndex = 0;
-            lineIndex++;
-            setTimeout(typeWriter, 1000);
-        }      
-    }
-}
-
-window.onload = function() {
-    typeWriter();
-};
-
-
 // 진척도 + 나타나기 
 window.addEventListener('scroll', function(){
     var pagescroll = window.scrollY;

@@ -1,6 +1,6 @@
 * { padding: 0; margin:0; -webkit-tap-highlight-color: transparent; } 
 a { text-decoration: none; color:inherit; } 
-body { font-size: 16px; font-weight:500; color:white; background-color: rgb(21, 24, 27); font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; scroll-behavior: smooth; } 
+body { width:100%; font-size: 16px; font-weight:500; color:white; background-color: rgb(21, 24, 27); font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; scroll-behavior: smooth; } 
 section { height: 100vh; } 
 li { list-style: none; } 
 
@@ -37,6 +37,14 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
     header .header-container .menu ul .nav-hamburger { display: inline-block;}
 }
 
+@media screen and (max-width: 567px) {
+    header { max-width: 567px; }    
+    header .header-container { padding: 0px 30px; }
+    header .header-container .logo { width: 40px; }
+    header .header-container .menu ul .nav-item{ display:none; }
+    header .header-container .menu ul .nav-hamburger { display: inline-block;}
+}
+
 /* mb-menu  */
 #mb-menu { display: grid; align-items: center; gap:50px; z-index: 9998; background: rgb(21, 24, 27); position: fixed; width: 100vw; opacity: 0; transition: all .5s; visibility: hidden }
 #mb-menu ul { display: grid; justify-content: center; gap:40px; }
@@ -45,24 +53,44 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #mb-menu.opening {visibility: visible; opacity: 1;}
 
 /* Intro */
-.Intro-container { position: relative; display: flex; align-items: center; justify-content: center; height: 100vh; background: url(../images/sec02_bg01.jpg) } 
-.Intro-container #typo-1 { overflow: hidden; white-space: nowrap; font-size: 1rem; color: white; display: inline-block; text-align: center; } 
-.Intro-container .scroll { position: absolute; display:flex; flex-direction: column; left:47%; bottom:80px; align-items: center; z-index: 1000; overflow-x: visible;} 
-.Intro-container .scroll div { position: absolute; width:35px; height: 35px; top:18px; background: url(../images/arrow_1.png) 50% 50% no-repeat; background-size: 35px 35px; filter: invert(90%); } 
-.Intro-container .scroll div:nth-child(1) { animation: scrolldown 1300ms 650ms linear infinite; animation-fill-mode: backwards; } 
-.Intro-container .scroll div:nth-child(2) { animation: scrolldown 1300ms linear infinite; } 
-.Intro-container .scroll p { color: white; opacity: 0.8; font-size:0.8rem; font-weight: 300; } 
-
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; } 
-}
-
+#Intro { display: flex; justify-content: center; background: url(../images/sec02_bg01.jpg); }
+#Intro .Intro-container { position: relative; display: flex; flex-direction: column; justify-content: center; width:100%; } 
+#Intro .Intro-container .typo-wrap .typewriter { text-align: center; overflow: hidden; white-space: nowrap; margin: 0 auto; }
+#Intro .Intro-container .typo-wrap #typewriter1 { font-size: 8rem; font-weight: 900; }
+#Intro .Intro-container .typo-wrap #typewriter2 { font-size: 2.0rem; font-weight: 900; letter-spacing: 1rem; }
+#Intro .Intro-container .scroll-wrap { position: absolute; left:48%; bottom: 8%; }
+#Intro .Intro-container .scroll-wrap .scroll { position: relative; z-index: 1000; overflow-x: visible; display: flex; justify-content: center; } 
+#Intro .Intro-container .scroll-wrap .scroll div { position: absolute; width:35px; height: 35px; background: url(../images/arrow_1.png) no-repeat; background-size: 35px 35px; filter: invert(90%); } 
+#Intro .Intro-container .scroll-wrap .scroll div:nth-child(1) { animation: scrolldown 1300ms 650ms linear infinite; animation-fill-mode: backwards; } 
+#Intro .Intro-container .scroll-wrap .scroll div:nth-child(2) { animation: scrolldown 1300ms linear infinite; } 
+#Intro .Intro-container .scroll-wrap p { color: white; opacity: 0.8; font-size:0.8rem; font-weight: 300; } 
 @keyframes scrolldown {
-    0% { top: 18px; opacity: 0; } 
+    0% { top: 15px; opacity: 0; } 
     50% { top: 35px; opacity: 0.3; }
     100% { top: 50px; opacity: 0; }    
+}
+
+@media (max-width: 1199px) {
+    #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 6.0rem; }
+    #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 991px) {
+    #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 5.5rem; }
+    #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.7rem; }
+}
+
+@media (max-width: 767px) {
+    #Intro {height: 80vh;}
+    #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 4.0rem; }
+    #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.6rem; }
+    #Intro .Intro-container .scroll-wrap { display: none; }
+}
+
+@media (max-width: 575px) {
+    #Intro {height: 50vh;}
+    #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 3.0rem; }
+    #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.4rem; }
 }
 
 /* About */
@@ -76,54 +104,55 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #About .about-container #typo-2 h1 span:nth-child(2) { color: #c2ffe3; } 
 #About .about-container #typo-2 h1 span:nth-child(3) { color: #ff9d9d; } 
 #About .about-container .about-main { display:flex; align-items: center; justify-content: center; } 
-#About .about-container .about-main .about-text { padding: 60px 200px; border: 1px dotted #f5f5f5; border-radius: 20px; background: rgba(0,0,0,.5); } 
-#About .about-container #typo-3 { font-size: 1.2rem; font-weight: 400; line-height: 1.9; opacity: 1; transition: 600ms ease; z-index: 10; text-align: center; } 
-#About .about-container #typo-3 .tag-wrap { display: flex; margin-top: 30px; align-items: center; justify-content: center; line-height: 100%; font-size: 0.9rem; font-weight: 500; } 
-#About .about-container #typo-3 .tag-wrap .tag { padding: 10px 20px; margin: 0 8px; background-color: rgba(55, 55, 67, 0.7); border-radius: 7px; } 
+#About .about-container .about-main .about-text { padding: 60px 200px; border: 1px dotted #f5f5f5; border-radius: 20px; background: rgba(0,0,0,.5); font-size: 1.2rem; font-weight: 500; } 
+#About .about-container #typo-3 { line-height: 1.9; opacity: 1; text-align: center; } 
+#About .about-container #typo-3 .tag-wrap { display: flex; margin-top: 30px; align-items: center; justify-content: center; line-height: 100%; } 
+#About .about-container #typo-3 .tag-wrap .tag { padding: 12px 20px; margin: 0 8px; background-color: rgba(55, 55, 67, 0.7); border-radius: 10px; } 
 
 @media screen and (max-width: 1199px) {
+    #About {max-width: 1199px;}
     #About .about-container .about-title > h1 { font-size: 2.4rem; }
     #About .about-container #typo-2 h1 { font-size: 2.0rem; }
     #About .about-container .about-main .about-text { padding: 60px 140px; }
-    #About .about-container #typo-3 { font-size: 1.1rem; }
-    #About .about-container #typo-3 .tag-wrap { font-size: 0.8rem; }
-    #About .about-container #typo-3 .tag-wrap .tag { padding: 8px 18px; }      
+    #About .about-container #typo-3 { font-size: 1.1rem; }    
+    #About .about-container #typo-3 .tag-wrap .tag { padding: 10px 18px; }      
 }
 
 @media screen and (max-width: 991px) {
     #About .about-container .about-title > h1 { font-size: 2.0rem; }
     #About .about-container #typo-2 h1 { font-size: 1.6rem; }
     #About .about-container .about-main .about-text { padding: 60px 85px; }
-    #About .about-container #typo-3 { font-size: 1.0rem; }
-    #About .about-container #typo-3 .tag-wrap { font-size: 0.7rem; }
-    #About .about-container #typo-3 .tag-wrap .tag { padding: 7px 16px; }      
+    #About .about-container #typo-3 { font-size: 1.0rem; }    
+    #About .about-container #typo-3 .tag-wrap .tag { padding: 9px 16px; }      
 }
 
 @media screen and (max-width: 767px) {
+    #About { height: 80vh; }    
     #About .about-container .about-title > h1 { font-size: 1.8rem; }
     #About .about-container #typo-2 h1 { font-size: 1.2rem; }
     #About .about-container .about-main .about-text { padding: 60px 40px; }
-    #About .about-container #typo-3 { font-size: 0.8rem; }
-    #About .about-container #typo-3 .tag-wrap { font-size: 0.6rem; }
-    #About .about-container #typo-3 .tag-wrap .tag { padding: 6px 14px; }      
+    #About .about-container #typo-3 { font-size: 0.8rem; }    
+    #About .about-container #typo-3 .tag-wrap .tag { padding: 8px 14px; }      
 }
 
 @media screen and (max-width: 575px) {
+    #About { height: 50vh; }
+    #About {max-width: 575px;}    
     #About .about-container .about-title > h1 { font-size: 1.5rem; }
     #About .about-container #typo-2 h1 { font-size: 0.7rem; }
-    #About .about-container .about-main .about-text { padding: 60px 20px; }
-    #About .about-container #typo-3 { font-size: 0.5rem; }
-    #About .about-container #typo-3 .tag-wrap { font-size: 0.5rem; }
-    #About .about-container #typo-3 .tag-wrap .tag { padding: 6px 14px; }      
+    #About .about-container .about-main-title { padding-bottom: 10px; }
+    #About .about-container .about-main .about-text { padding: 30px 20px; }
+    #About .about-container #typo-3 { font-size: 0.6rem; }    
+    #About .about-container #typo-3 .tag-wrap .tag { padding: 7px 14px; }      
 }
 /* Stacks */
-#Stacks { background: rgb(15, 15, 15); display: flex; justify-content: center; } 
+#Stacks { background: rgb(15, 15, 15); display: flex; justify-content: center; width:100%; } 
 #Stacks .stacks-container { display:flex; flex-direction: column; justify-content: center; gap: 120px; }
 #Stacks .stacks-container .stacks-title h1 { text-align: center; font-size: 2.5rem; font-weight: 900; width:100%; }
 #Stacks .stacks-container .stacks-title h2 { text-align: center; font-size: 1.0rem; font-weight: 400; }
 #Stacks .stacks-container .stack-container { display:flex; align-items: center; gap: 100px; position: relative;}
-#Stacks .stacks-container .stack-container .stack-title { font-size: 1.5rem; font-weight: 500; background: #4c4c4cae; padding: 10px 15px; border-radius: 10px; position: absolute; left: -300px; }
-#Stacks .stacks-container .stack-container ul { display:flex; gap: 40px; min-width: 818px; }
+#Stacks .stacks-container .stack-container .stack-title { font-size: 1.5rem; font-weight: 500; background: #4c4c4cae; padding: 10px 15px; border-radius: 10px; width: 180px; text-align: center; }
+#Stacks .stacks-container .stack-container ul { display:flex; gap: 40px; width: 818px; }
 #Stacks .stacks-container .stack-container ul li { display:flex; gap: 40px; align-items: center; justify-content: center; padding:30px ; border: 1px solid #555454; border-radius: 10px; position: relative; transition: all 0.3s ease; overflow: hidden; background: rgb(39, 39, 39);}
 #Stacks .stacks-container .stack-container ul li:hover {padding-right: 200px;}
 #Stacks .stacks-container .stack-container ul li a img { width: 70px; height: 70px; } 
@@ -132,6 +161,33 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #Stacks .stacks-container .stack-container ul li .stack-text p { padding-left: 20px; padding-bottom: 5px; }
 #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 1.2rem; font-weight: 800; }
 #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.9rem; font-weight: 400; }
+
+@media screen and (max-width: 1199px) {
+    #Stacks .stacks-container { gap: 80px; }
+    #Stacks .stacks-container .stack-container { flex-direction: column; }
+    #Stacks .stacks-container .stack-container ul { justify-content: center; }
+}
+
+@media screen and (max-width: 991px) {
+    #Stacks .stacks-container { gap: 80px; }
+    #Stacks .stacks-container .stack-container { flex-direction: column; }
+    #Stacks .stacks-container .stack-container ul li a img { width: 50px; height: 50px; }
+    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 210px; }
+    #Stacks .stacks-container .stack-container ul li:hover .stack-text {left: 100px;}   
+}
+
+@media screen and (max-width: 767px) {
+    #Stacks { height: 200vh; } 
+    #Stacks .stacks-container { gap: 80px; min-width: 272px;}
+    #Stacks .stacks-container .stack-container ul { flex-direction: column; width: 90px; }
+    #Stacks .stacks-container .stack-container ul li { justify-content: unset; }
+    #Stacks .stacks-container .stack-container ul li a img { width: 30px; height: 30px; }
+    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 240px; }
+    #Stacks .stacks-container .stack-container ul li:hover .stack-text {left: 80px;}
+    #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 1.0rem; font-weight: 800; }  
+    #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.8rem; font-weight: 400; } 
+}
+
 
 
 /* Works */
