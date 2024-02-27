@@ -110,9 +110,9 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 
 @media screen and (max-width: 575px) {
     #About .about-container .about-title > h1 { font-size: 1.5rem; }
-    #About .about-container #typo-2 h1 { font-size: 0.8rem; }
+    #About .about-container #typo-2 h1 { font-size: 0.7rem; }
     #About .about-container .about-main .about-text { padding: 60px 20px; }
-    #About .about-container #typo-3 { font-size: 0.6rem; }
+    #About .about-container #typo-3 { font-size: 0.5rem; }
     #About .about-container #typo-3 .tag-wrap { font-size: 0.5rem; }
     #About .about-container #typo-3 .tag-wrap .tag { padding: 6px 14px; }      
 }
