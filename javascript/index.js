@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 슬라이드 전환 속도를 500ms로 설정합니다.
         speed: 500,
         // 한 번에 보여질 슬라이드의 수를 3개로 설정합니다.
-        slidesPerView: 3,
+        slidesPerView: 1,
         // 슬라이드 간의 간격을 15px로 설정합니다.
         spaceBetween: 15,
         // 슬라이드 루프(순환)를 활성화합니다.
@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-button-prev',
             // 다음 버튼의 CSS 선택자를 지정합니다.
             nextEl: '.swiper-button-next',
-        }           
+        },
+        breakpoints: {
+            // 화면 너비가 991px 이하일 때의 설정
+            991: {
+                slidesPerView: 3,
+                // 필요하다면 spaceBetween도 조정할 수 있습니다.
+                spaceBetween: 10 // 예시로, 간격을 10px로 조정
+            }
+        }                  
     });
 });

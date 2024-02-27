@@ -72,8 +72,9 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 @media (max-width: 1199px) {
-    #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 6.0rem; }
-    #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.8rem; }
+    body { font-size: 14px; }
+    /* #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 6.0rem; }
+    #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.8rem; } */
 }
 
 @media (max-width: 991px) {
@@ -200,7 +201,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #works .works-container { position: relative; display: flex; flex-direction: column; gap: 100px; justify-content: center; } 
 #works .works-container .works-title> h1 { text-align: center; font-size: 2.7rem; font-weight: 900; }
 #works .works-container .works-title> h2 { text-align: center; font-size: 1.0rem; font-weight: 400; }
-#works .swiper-container { overflow: unset; max-width: 1400px; } 
+#works .swiper-container { overflow: unset; max-width: 1100px; } 
 #works .swiper-content { width: 100%; height: 100%; overflow: hidden; border-radius: 4px; } 
 #works .swiper-content .swiper-wrapper .swiper-slide { position: relative; width: 33%; aspect-ratio: 1/1; cursor: pointer; border-radius: 4px; transition: all .3s; overflow: hidden; } 
 #works .swiper-content .swiper-wrapper .swiper-slide img { width: 100%; height: 100%; border-radius: inherit; object-fit: cover; object-position: center; transition: transform .3s; } 
@@ -209,12 +210,12 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #works .swiper-content .swiper-wrapper .swiper-slide:hover .swiper-text-container { display: grid ; }
 #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container { position: absolute; left:0; top:0; width:100%; height:100%; display:none; align-items: center; justify-content: center; transition: all .3s; } 
 #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap { display: grid; gap: 30px; }
-#works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title h1 { font-size: 2rem; font-weight: 900; padding-bottom: 10px; }
+#works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title h1 { font-size: 1.7rem; font-weight: 900; padding-bottom: 10px; }
 #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title p { font-size: 0.9rem;  font-weight: 800; color: rgb(255, 229, 100);}
-#works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content p {padding-bottom: 20px; font-weight: 600 ;line-height: 2.0rem; font-size: 1.1rem; }
-#works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div span { border: 1px solid #d6d6d6; padding: 5px 10px; border-radius: 15px; margin-right: 10px; font-size:0.9rem; font-weight: 600; color: rgb(248 199 199); }
+#works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content p {padding-bottom: 20px; font-weight: 600 ; line-height: 1.5rem; font-size: 0.9rem; }
+#works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div span { border: 1px solid rgb(248 199 199); padding: 5px 10px; border-radius: 15px; margin-right: 10px; font-size: 0.7rem; font-weight: 600; color: rgb(248 199 199); }
 #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom {padding-top: 15px;}
-#works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom a { background: rgb(79 78 250); padding: 10px 20px; border-radius: 10px; }
+#works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom a { background: rgb(79 78 250); padding: 10px 20px; border-radius: 5px; font-size: 0.8rem; }
 #works .swiper-button-prev,
 #works .swiper-button-next { width: 40px; height: 40px; color: #000; background: #111; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px; font-size: 14px; top: 50%; transform: translateY(-50%); margin: 5px 0 0; } 
 #works .swiper-button-prev { left: -70px; } 
@@ -226,8 +227,47 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #works .swiper-button-next.swiper-button-disabled,
 #works .swiper-button-prev.swiper-button-disabled { opacity: .1; } 
 
+@media screen and (max-width: 1199px) {
+    #works .swiper-container { max-width: 800px; } 
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap {gap: 15px;}
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title h1 { font-size: 1.4rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title p { font-size: 0.8rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content p { font-size: 0.65rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div span { font-size: 0.6rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div .span-over {padding: 5px 3px; margin-right:5px;}
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom a { font-size: 0.65rem; padding: 8px 16px; }
+}
+
+@media screen and (max-width: 991px) {
+    #works .swiper-container { max-width: 500px; } 
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap {gap: 30px;}
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title h1 { font-size: 2rem; padding-bottom: 10px; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title p { font-size: 0.9rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content p {padding-bottom: 20px; font-weight: 600 ;line-height: 2.0rem; font-size: 1.1rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div span { border: 1px solid #d6d6d6; padding: 5px 10px; margin-right: 10px; font-size:0.9rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div .span-over {padding: 5px 10px; margin-right: 10px; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom a { background: rgb(79 78 250); padding: 10px 20px; border-radius: 10px; font-size:0.9rem; } 
+}
+
 @media screen and (max-width: 767px) {
-    #works { max-width : 767px; }
+    #works .swiper-container { max-width: 400px; } 
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap {gap: 15px;}
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title h1 { font-size: 1.5rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title p { font-size: 0.8rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content p { font-size: 0.8rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div span { font-size: 0.7rem; }    
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom a { font-size: 0.7rem; padding: 8px 16px; }
+}
+
+@media screen and (max-width: 575px) {
+    #works .swiper-container { max-width: 250px; } 
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap {gap: 10px;}    
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title h1 { font-size: 1.3rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title p { font-size: 0.6rem; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content p { font-size: 0.65rem; padding-bottom: 10px; }
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div span { font-size: 0.65rem; }        
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-content div .span-over {padding: 5px 3px; margin-right:3px;}
+    #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-bottom a { font-size: 0.65rem; padding: 6px 14px; }
 }
 
 /* Contact */
@@ -253,4 +293,5 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
     #Contact .contact-container .contact-title h1 { font-size: 1.5rem;}
     #Contact .contact-container .contact-main .contact-wrap p { font-size: 1.0rem;}
     #Contact .contact-container .contact-bottom { font-size: 0.8rem; }
+    
 }
