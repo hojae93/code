@@ -31,7 +31,8 @@ header .header-container .menu ul .nav-hamburger.open span:nth-child(2) { opacit
 header .header-container .menu ul .nav-hamburger.open span:last-child { transform: translateY(-12px) rotate(-45deg);}
 
 @media screen and (max-width: 767px) {
-    header { max-width: 767px;  }
+    header { max-width: 767px; }
+    header .header-container { padding: 0px 30px; }
     header .header-container .menu ul .nav-item{ display:none; }
     header .header-container .menu ul .nav-hamburger { display: inline-block;}
 }
@@ -65,10 +66,10 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 /* About */
-#About { background: url(../images/visual.png) center no-repeat #121212; display:grid; align-items: center; } 
-#About .about-container { display: grid; justify-content: center; gap: 50px;}
+#About { background: url(../images/visual.png) center no-repeat #121212; display:flex; justify-content: center; } 
+#About .about-container { display: flex; flex-direction: column; justify-content: center; gap: 50px;}
 #About .about-container .about-title > h1 { width:100%; text-align: center; font-size: 2.7rem; font-weight: 900; color: rgba(255,255,255,.5); z-index: 50; padding-top: 80px; }  
-#About .about-container .about-main-title { width: 100%; display:flex; justify-content: center; padding-bottom: 50px; } 
+#About .about-container .about-main-title    { width: 100%; display:flex; justify-content: center; padding-bottom: 50px; } 
 #About .about-container .about-main-title #typo-2 { color: white; text-align: center; transition: 600ms ease; z-index: 10; opacity: 1; } 
 #About .about-container #typo-2 h1 { line-height: 1.5; font-size: 2.5rem; font-weight: 900; text-align: center; } 
 #About .about-container #typo-2 h1 span:nth-child(1) { color: #badbff; } 
@@ -81,46 +82,43 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #About .about-container #typo-3 .tag-wrap .tag { padding: 10px 20px; margin: 0 8px; background-color: rgba(55, 55, 67, 0.7); border-radius: 7px; } 
 
 @media screen and (max-width: 1199px) {
-    #About { max-width: 1199px; }
-    #About .about-container .about-title > h1 { padding-top: 50px; }
+    #About .about-container .about-title > h1 { font-size: 2.4rem; }
     #About .about-container #typo-2 h1 { font-size: 2.0rem; }
-    #About .about-container .about-main .about-text { padding: 70px 100px; }
-    #About .about-container #typo-3 .tag-wrap{ font-size: 0.9rem; }
-    #About .about-container #typo-3 .tag-wrap .tag {padding: 10px 15px;}
+    #About .about-container .about-main .about-text { padding: 60px 140px; }
+    #About .about-container #typo-3 { font-size: 1.1rem; }
+    #About .about-container #typo-3 .tag-wrap { font-size: 0.8rem; }
+    #About .about-container #typo-3 .tag-wrap .tag { padding: 8px 18px; }      
 }
 
 @media screen and (max-width: 991px) {
-    #About {max-width: 991px; }    
-    #About .about-container .about-title > h1 { padding-top: 40px; }
+    #About .about-container .about-title > h1 { font-size: 2.0rem; }
     #About .about-container #typo-2 h1 { font-size: 1.6rem; }
-    #About .about-container .about-main-title {padding-bottom: 30px;}
-    #About .about-container .about-main .about-text { padding: 70px 50px; }
-    #About .about-container #typo-3 { font-size: 1.1rem;}
-    #About .about-container #typo-3 .tag-wrap{ font-size: 0.8rem; }
-    #About .about-container #typo-3 .tag-wrap .tag {padding: 9px 14px;}
+    #About .about-container .about-main .about-text { padding: 60px 85px; }
+    #About .about-container #typo-3 { font-size: 1.0rem; }
+    #About .about-container #typo-3 .tag-wrap { font-size: 0.7rem; }
+    #About .about-container #typo-3 .tag-wrap .tag { padding: 7px 16px; }      
 }
 
 @media screen and (max-width: 767px) {
-    #About {max-width: 767px; }    
-    #About .about-container #typo-2 h1 { font-size: 1.2rem; }    
-    #About .about-container .about-main .about-text { padding: 30px 10px; }
-    #About .about-container #typo-3 { font-size: 0.9rem;}
-    #About .about-container #typo-3 .tag-wrap{ font-size: 0.7rem; }
-    #About .about-container #typo-3 .tag-wrap .tag {padding: 7px 12px;}
+    #About .about-container .about-title > h1 { font-size: 1.8rem; }
+    #About .about-container #typo-2 h1 { font-size: 1.2rem; }
+    #About .about-container .about-main .about-text { padding: 60px 40px; }
+    #About .about-container #typo-3 { font-size: 0.8rem; }
+    #About .about-container #typo-3 .tag-wrap { font-size: 0.6rem; }
+    #About .about-container #typo-3 .tag-wrap .tag { padding: 6px 14px; }      
 }
 
 @media screen and (max-width: 575px) {
-    #About { max-width: 575px; }    
-    #About .about-container #typo-2 h1 { font-size: 0.9rem; }    
-    #About .about-container .about-main .about-text { padding: 30px 10px; }
-    #About .about-container #typo-3 { font-size: 0.7rem;}
-    #About .about-container #typo-3 .tag-wrap{ font-size: 0.6rem; }
-    #About .about-container #typo-3 .tag-wrap .tag {padding: 5px 10px;}
+    #About .about-container .about-title > h1 { font-size: 1.5rem; }
+    #About .about-container #typo-2 h1 { font-size: 0.8rem; }
+    #About .about-container .about-main .about-text { padding: 60px 20px; }
+    #About .about-container #typo-3 { font-size: 0.6rem; }
+    #About .about-container #typo-3 .tag-wrap { font-size: 0.5rem; }
+    #About .about-container #typo-3 .tag-wrap .tag { padding: 6px 14px; }      
 }
-
 /* Stacks */
-#Stacks { background: rgb(15, 15, 15); display: grid; align-items: center; } 
-#Stacks .stacks-container { display:grid; justify-content: center; gap: 100px; }
+#Stacks { background: rgb(15, 15, 15); display: flex; justify-content: center; } 
+#Stacks .stacks-container { display:flex; flex-direction: column; justify-content: center; gap: 120px; }
 #Stacks .stacks-container .stacks-title h1 { text-align: center; font-size: 2.5rem; font-weight: 900; width:100%; }
 #Stacks .stacks-container .stacks-title h2 { text-align: center; font-size: 1.0rem; font-weight: 400; }
 #Stacks .stacks-container .stack-container { display:flex; align-items: center; gap: 100px; position: relative;}
@@ -137,8 +135,8 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 
 
 /* Works */
-#works { position: relative; background: rgb(6, 6, 6); display: grid; } 
-#works .works-container { position: relative; align-self: center; display: grid; gap: 30px; } 
+#works { position: relative; background: rgb(6, 6, 6); display: flex; justify-content: center; } 
+#works .works-container { position: relative; display: flex; flex-direction: column; gap: 100px; justify-content: center; } 
 #works .works-container .works-title> h1 { text-align: center; font-size: 2.7rem; font-weight: 900; }
 #works .works-container .works-title> h2 { text-align: center; font-size: 1.0rem; font-weight: 400; }
 #works .swiper-container { overflow: unset; max-width: 1400px; } 
@@ -172,51 +170,13 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 /* Contact */
-#Contact { background: url(../images/sec02_bg01.jpg) 50% 50% no-repeat; display: grid; align-items: center; } 
-.contact-container { display: grid; justify-content: center; gap: 150px; } 
-.contact-container .contact-title h1 { text-align: center; font-size: 2.7rem; font-weight: 900; } 
-.contact-container .contact-main .contact-wrap { display: flex; flex-direction: column; gap: 30px; position: relative; }
-.contact-container .contact-main .contact-wrap p{ font-size: 1.6rem ; font-weight: 300; } 
-.contact-container .contact-main .contact-wrap p i { padding-right: 10px; }
-.contact-container .social-wrap { display: flex; justify-content: center; gap: 100px;}
-.contact-container .social-wrap li:hover { transform: scale(140%); transition: all 0.5s; } 
-.contact-container .contact-bottom { font-size: 1.1rem; font-weight: 300; color: #7D7D82; text-align: center; } 
-
-@media screen and (max-width: 1199px) {
-    #Contact { max-width: 1199px; }
-    .contact-container { gap: 125px; }
-    .contact-container .contact-title h1 { font-size: 2.3rem; }
-    .contact-container .contact-main .contact-wrap p { font-size: 1.4rem;}
-    .contact-container .social-wrap { gap: 110px; }
-    .contact-container .social-wrap li img{ width: 35px; height: 35px;}
-    .contact-container .contact-bottom { font-size: 1.0rem; }
-}
-
-@media screen and (max-width: 991px) {
-    #Contact { max-width: 991px; }
-    .contact-container { gap: 120px; }
-    .contact-container .contact-title h1 { font-size: 2.2rem; }
-    .contact-container .contact-main .contact-wrap p { font-size: 1.3rem;}
-    .contact-container .social-wrap { gap: 120px; }
-    .contact-container .social-wrap li img{ width: 35px; height: 35px;}
-    .contact-container .contact-bottom { font-size: 1.0rem; }
-}
-
-@media screen and (max-width: 767px) {
-    #Contact { max-width: 767px; }
-    .contact-container { gap: 125px; }
-    .contact-container .contact-title h1 { font-size: 2.1rem; }
-    .contact-container .contact-main .contact-wrap p { font-size: 1.2rem;}
-    .contact-container .social-wrap { gap: 110px; }
-    .contact-container .social-wrap li img{ width: 30px; height: 30px;}
-    .contact-container .contact-bottom { font-size: 0.9rem; }
-}
-
-@media screen and (max-width: 575px) {
-    #Contact { max-width: 575px; }
-    .contact-container { gap: 135px; }
-    .contact-container .contact-title h1 { font-size: 2.0rem; }
-    .contact-container .contact-main .contact-wrap p { font-size: 1.1rem;}
-    .contact-container .social-wrap { gap: 80px; }
-    .contact-container .contact-bottom { font-size: 0.9rem; }
-}
+#Contact { background: url(../images/sec02_bg01.jpg) 50% 50% no-repeat; display: flex; justify-content: center; } 
+#Contact .contact-container { display: flex; flex-direction: column; gap: 155px; } 
+#Contact .contact-container .contact-title {margin-top: 100px;}
+#Contact .contact-container .contact-title h1 { text-align: center; font-size: 2.7rem; font-weight: 900; } 
+#Contact .contact-container .contact-main .contact-wrap { display: flex; flex-direction: column; gap: 30px; position: relative; }
+#Contact .contact-container .contact-main .contact-wrap p{ font-size: 1.6rem ; font-weight: 300; } 
+#Contact .contact-container .contact-main .contact-wrap p i { padding-right: 10px; }
+#Contact .contact-container .social-wrap { display: flex; justify-content: center; gap: 100px;}
+#Contact .contact-container .social-wrap li:hover { transform: scale(140%); transition: all 0.5s; } 
+#Contact .contact-container .contact-bottom { font-size: 1.1rem; font-weight: 300; color: #7D7D82; text-align: center; } 
