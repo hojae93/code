@@ -54,12 +54,12 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #mb-menu.opening { visibility: visible; opacity: 1; }
 
 /* Intro */
-#Intro { display: flex; justify-content: center; background: url(../images/sec02_bg01.jpg); }
+#Intro { display: flex; justify-content: center; background: url(../images/sec02_bg01.jpg); background-position-x: 50%; }
 #Intro .Intro-container { position: relative; display: flex; flex-direction: column; justify-content: center; width:100%; } 
 #Intro .Intro-container .typo-wrap .typewriter { text-align: center; overflow: hidden; white-space: nowrap; margin: 0 auto; }
 #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 8rem; font-weight: 900; }
 #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 2.0rem; font-weight: 900; letter-spacing: 1rem; }
-#Intro .Intro-container .scroll-wrap { position: absolute; left:48%; bottom: 8%; }
+#Intro .Intro-container .scroll-wrap { position: absolute; left: 47%; bottom: 8%; }
 #Intro .Intro-container .scroll-wrap .scroll { position: relative; z-index: 1000; overflow-x: visible; display: flex; justify-content: center; } 
 #Intro .Intro-container .scroll-wrap .scroll div { position: absolute; width:35px; height: 35px; background: url(../images/arrow_1.png) no-repeat; background-size: 35px 35px; filter: invert(90%); } 
 #Intro .Intro-container .scroll-wrap .scroll div:nth-child(1) { animation: scrolldown 1300ms 650ms linear infinite; animation-fill-mode: backwards; } 
@@ -71,10 +71,10 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
     100% { top: 50px; opacity: 0; }    
 }
 
-@media (max-width: 1199px) {
-    body { font-size: 14px; }
-    /* #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 6.0rem; }
-    #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.8rem; } */
+@media (max-width: 1199px) {    
+    #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 6.0rem; }
+    #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.8rem; }
+    #Intro .Intro-container .scroll-wrap {left: 45%; }
 }
 
 @media (max-width: 991px) {
@@ -85,12 +85,13 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 @media (max-width: 767px) {
     #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 4.0rem; }
     #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.6rem; }
-    #Intro .Intro-container .scroll-wrap { display: none; }
+    #Intro .Intro-container .scroll-wrap {left: 42%; }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575px) {    
     #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 2.8rem; }
     #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.4rem; }
+    #Intro .Intro-container .scroll-wrap {left: 40%; }
 }
 
 /* About */
@@ -290,7 +291,8 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 @media screen and (max-width: 575px) {
-    #Contact .contact-container .contact-title h1 { font-size: 1.5rem;}
+    #Contact .contact-container { gap: 180px; }
+    #Contact .contact-container .contact-title h1 { font-size: 1.5rem; }
     #Contact .contact-container .contact-main .contact-wrap p { font-size: 1.0rem;}
     #Contact .contact-container .contact-bottom { font-size: 0.8rem; }
     
