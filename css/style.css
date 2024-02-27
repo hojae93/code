@@ -4,6 +4,7 @@ body { width:100%; font-size: 16px; font-weight:500; color:white; background-col
 section { height: 100vh; } 
 li { list-style: none; } 
 
+
 /* 마우스 스크롤 이벤트 */
 .container { opacity: 0; transition: opacity 0.5s ease; /* 투명도 전환 효과 */}
 .container.show { opacity: 1; }
@@ -49,8 +50,8 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #mb-menu { display: grid; align-items: center; gap:50px; z-index: 9998; background: rgb(21, 24, 27); position: fixed; width: 100vw; opacity: 0; transition: all .5s; visibility: hidden }
 #mb-menu ul { display: grid; justify-content: center; gap:40px; }
 #mb-menu ul li { font-size: 2.5rem; font-weight: 900; text-align: center; }
-#mb-menu ul li:hover{ border-bottom: 2px solid #fff;}
-#mb-menu.opening {visibility: visible; opacity: 1;}
+#mb-menu ul li:active { border-bottom: 2px solid #fff; }
+#mb-menu.opening { visibility: visible; opacity: 1; }
 
 /* Intro */
 #Intro { display: flex; justify-content: center; background: url(../images/sec02_bg01.jpg); }
@@ -88,8 +89,8 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 @media (max-width: 575px) {
-    #Intro {height: 50vh;}
-    #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 3.0rem; }
+    #Intro {height: 80vh;}
+    #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 2.8rem; }
     #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.4rem; }
 }
 
@@ -182,8 +183,10 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
     #Stacks .stacks-container .stack-container ul { flex-direction: column; width: 90px; }
     #Stacks .stacks-container .stack-container ul li { justify-content: unset; }
     #Stacks .stacks-container .stack-container ul li a img { width: 30px; height: 30px; }
-    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 240px; }
-    #Stacks .stacks-container .stack-container ul li:hover .stack-text {left: 80px;}
+    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 0px; }
+    #Stacks .stacks-container .stack-container ul li:hover .stack-text {left: 0px;}
+    #Stacks .stacks-container .stack-container ul li:active { padding-right: 240px; }
+    #Stacks .stacks-container .stack-container ul li:active .stack-text {left: 80px;}
     #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 1.0rem; font-weight: 800; }  
     #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.8rem; font-weight: 400; } 
 }

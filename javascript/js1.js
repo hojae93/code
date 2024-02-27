@@ -86,6 +86,8 @@ window.addEventListener('scroll', function(){
     });
 });
 
+// 모바일화면에서 터치시 호버와 같은 효과
+document.addEventListener("touchstart", function() {}, true);
 
     
 
