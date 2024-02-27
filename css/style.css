@@ -82,14 +82,12 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 @media (max-width: 767px) {
-    #Intro {height: 80vh;}
     #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 4.0rem; }
     #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.6rem; }
     #Intro .Intro-container .scroll-wrap { display: none; }
 }
 
 @media (max-width: 575px) {
-    #Intro {height: 80vh;}
     #Intro .Intro-container .typo-wrap #typewriter1 { font-size: 2.8rem; }
     #Intro .Intro-container .typo-wrap #typewriter2 { font-size: 1.4rem; }
 }
@@ -110,8 +108,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #About .about-container #typo-3 .tag-wrap { display: flex; margin-top: 30px; align-items: center; justify-content: center; line-height: 100%; } 
 #About .about-container #typo-3 .tag-wrap .tag { padding: 12px 20px; margin: 0 8px; background-color: rgba(55, 55, 67, 0.7); border-radius: 10px; } 
 
-@media screen and (max-width: 1199px) {
-    #About {max-width: 1199px;}
+@media screen and (max-width: 1199px) {    
     #About .about-container .about-title > h1 { font-size: 2.4rem; }
     #About .about-container #typo-2 h1 { font-size: 2.0rem; }
     #About .about-container .about-main .about-text { padding: 60px 140px; }
@@ -128,7 +125,6 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 @media screen and (max-width: 767px) {
-    #About { height: 80vh; }    
     #About .about-container .about-title > h1 { font-size: 1.8rem; }
     #About .about-container #typo-2 h1 { font-size: 1.2rem; }
     #About .about-container .about-main .about-text { padding: 60px 40px; }
@@ -136,9 +132,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
     #About .about-container #typo-3 .tag-wrap .tag { padding: 8px 14px; }      
 }
 
-@media screen and (max-width: 575px) {
-    #About { height: 50vh; }
-    #About {max-width: 575px;}    
+@media screen and (max-width: 575px) {    
     #About .about-container .about-title > h1 { font-size: 1.5rem; }
     #About .about-container #typo-2 h1 { font-size: 0.7rem; }
     #About .about-container .about-main-title { padding-bottom: 10px; }
@@ -178,16 +172,28 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 @media screen and (max-width: 767px) {
-    #Stacks { height: 200vh; } 
+    #Stacks { height: 150vh; } 
     #Stacks .stacks-container { gap: 80px; min-width: 272px;}
+    #Stacks .stacks-container .stacks-title h1 { font-size: 1.8rem; }
+    #Stacks .stacks-container .stacks-title h2 { font-size: 0.9rem; }
+    #Stacks .stacks-container .stack-container .stack-title { font-size: 1.0rem; }
     #Stacks .stacks-container .stack-container ul { flex-direction: column; width: 90px; }
     #Stacks .stacks-container .stack-container ul li { justify-content: unset; }
     #Stacks .stacks-container .stack-container ul li a img { width: 30px; height: 30px; }
+    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 220px; }
+    #Stacks .stacks-container .stack-container ul li:hover .stack-text { left: 70px; }
     #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 1.0rem; font-weight: 800; }  
     #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.8rem; font-weight: 400; } 
 }
 
-
+@media screen and (max-width: 767px) {
+    #Stacks .stacks-container .stack-container ul { width: 60px; }
+    #Stacks .stacks-container .stack-container ul li { padding: 15px;}
+    #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 0.8rem; font-weight: 800; } 
+    #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.5rem; font-weight: 400; }
+    #Stacks .stacks-container .stack-container ul li:hover .stack-text { left: 50px; width: 120px; }
+    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 160px; }
+}
 
 /* Works */
 #works { position: relative; background: rgb(6, 6, 6); display: flex; justify-content: center; } 
@@ -226,7 +232,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 
 /* Contact */
 #Contact { background: url(../images/sec02_bg01.jpg) 50% 50% no-repeat; display: flex; justify-content: center; } 
-#Contact .contact-container { display: flex; flex-direction: column; gap: 155px; } 
+#Contact .contact-container { display: flex; flex-direction: column; gap: 150px; } 
 #Contact .contact-container .contact-title {margin-top: 100px;}
 #Contact .contact-container .contact-title h1 { text-align: center; font-size: 2.7rem; font-weight: 900; } 
 #Contact .contact-container .contact-main .contact-wrap { display: flex; flex-direction: column; gap: 30px; position: relative; }
@@ -235,3 +241,16 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #Contact .contact-container .social-wrap { display: flex; justify-content: center; gap: 100px;}
 #Contact .contact-container .social-wrap li:hover { transform: scale(140%); transition: all 0.5s; } 
 #Contact .contact-container .contact-bottom { font-size: 1.1rem; font-weight: 300; color: #7D7D82; text-align: center; } 
+
+@media screen and (max-width: 767px) {
+    #Contact .contact-container .contact-title h1 { font-size: 1.8rem;}
+    #Contact .contact-container .contact-main .contact-wrap p { font-size: 1.3rem;}
+    #Contact .contact-container .social-wrap img { width: 30px; }
+    #Contact .contact-container .contact-bottom { font-size: 0.9rem; }
+}
+
+@media screen and (max-width: 575px) {
+    #Contact .contact-container .contact-title h1 { font-size: 1.5rem;}
+    #Contact .contact-container .contact-main .contact-wrap p { font-size: 1.0rem;}
+    #Contact .contact-container .contact-bottom { font-size: 0.8rem; }
+}
