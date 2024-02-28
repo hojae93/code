@@ -1,12 +1,12 @@
-// 메뉴 글자크기 커지게하기
+// 메뉴 글자크기 커지게하고 밑줄 나타나게 하기
 document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('mouseover', function() {
-      this.querySelector('a').style.fontSize = "1.3em"; /* hover 시 폰트 크기 증가 */
-      this.classList.add('menushow');
+      this.querySelector('a').style.fontSize = "1.3em"; // 글자크기 크게
+      this.classList.add('menushow'); // 밑줄 클래스 추가
     });
     item.addEventListener('mouseout', function() {
-      this.querySelector('a').style.fontSize = "1em"; /* hover 끝나면 폰트 크기 원래대로 */
-      this.classList.remove('menushow'); 
+      this.querySelector('a').style.fontSize = "1em"; // 글자크기 원래대로
+      this.classList.remove('menushow'); // 밑줄 클래스 제거
     });
 });
 

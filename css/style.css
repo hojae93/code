@@ -100,47 +100,47 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #About .about-container .about-title > h1 { width:100%; text-align: center; font-size: 2.7rem; font-weight: 900; color: rgba(255,255,255,.5); z-index: 50; padding-top: 80px; }  
 #About .about-container .about-main-title    { width: 100%; display:flex; justify-content: center; padding-bottom: 50px; } 
 #About .about-container .about-main-title #typo-2 { color: white; text-align: center; transition: 600ms ease; z-index: 10; opacity: 1; } 
-#About .about-container #typo-2 h1 { line-height: 1.5; font-size: 2.5rem; font-weight: 900; text-align: center; } 
-#About .about-container #typo-2 h1 span:nth-child(1) { color: #badbff; } 
-#About .about-container #typo-2 h1 span:nth-child(2) { color: #c2ffe3; } 
-#About .about-container #typo-2 h1 span:nth-child(3) { color: #ff9d9d; } 
+#About .about-container .about-main-title #typo-2 h1 { line-height: 1.5; font-size: 2.5rem; font-weight: 900; text-align: center; } 
+#About .about-container .about-main-title #typo-2 h1 span:nth-child(1) { color: #badbff; } 
+#About .about-container .about-main-title #typo-2 h1 span:nth-child(2) { color: #c2ffe3; } 
+#About .about-container .about-main-title #typo-2 h1 span:nth-child(3) { color: #ff9d9d; } 
 #About .about-container .about-main { display:flex; align-items: center; justify-content: center; } 
 #About .about-container .about-main .about-text { padding: 60px 200px; border: 1px dotted #f5f5f5; border-radius: 20px; background: rgba(0,0,0,.5); font-size: 1.2rem; font-weight: 500; } 
-#About .about-container #typo-3 { line-height: 1.9; opacity: 1; text-align: center; } 
-#About .about-container #typo-3 .tag-wrap { display: flex; margin-top: 30px; align-items: center; justify-content: center; line-height: 100%; } 
-#About .about-container #typo-3 .tag-wrap .tag { padding: 12px 20px; margin: 0 8px; background-color: rgba(55, 55, 67, 0.7); border-radius: 10px; } 
+#About .about-container .about-main .about-text #typo-3 { line-height: 1.9; opacity: 1; text-align: center; } 
+#About .about-container .about-main .about-text #typo-3 .tag-wrap { display: flex; margin-top: 30px; align-items: center; justify-content: center; line-height: 100%; } 
+#About .about-container .about-main .about-text #typo-3 .tag-wrap .tag { padding: 12px 20px; margin: 0 8px; background-color: rgba(55, 55, 67, 0.7); border-radius: 10px; } 
 
 @media screen and (max-width: 1199px) {    
     #About .about-container .about-title > h1 { font-size: 2.4rem; }
-    #About .about-container #typo-2 h1 { font-size: 2.0rem; }
+    #About .about-container .about-main-title #typo-2 h1 { font-size: 2.0rem; }
     #About .about-container .about-main .about-text { padding: 60px 140px; }
-    #About .about-container #typo-3 { font-size: 1.1rem; }    
-    #About .about-container #typo-3 .tag-wrap .tag { padding: 10px 18px; }      
+    #About .about-container .about-main .about-text #typo-3 { font-size: 1.1rem; }    
+    #About .about-container .about-main .about-text #typo-3 .tag-wrap .tag { padding: 10px 18px; }      
 }
 
 @media screen and (max-width: 991px) {
     #About .about-container .about-title > h1 { font-size: 2.0rem; }
-    #About .about-container #typo-2 h1 { font-size: 1.6rem; }
+    #About .about-container .about-main-title #typo-2 h1 { font-size: 1.6rem; }
     #About .about-container .about-main .about-text { padding: 60px 85px; }
-    #About .about-container #typo-3 { font-size: 1.0rem; }    
-    #About .about-container #typo-3 .tag-wrap .tag { padding: 9px 16px; }      
+    #About .about-container .about-main .about-text #typo-3 { font-size: 1.0rem; }    
+    #About .about-container .about-main .about-text #typo-3 .tag-wrap .tag { padding: 9px 16px; }      
 }
 
 @media screen and (max-width: 767px) {
     #About .about-container .about-title > h1 { font-size: 1.8rem; }
-    #About .about-container #typo-2 h1 { font-size: 1.2rem; }
+    #About .about-container .about-main-title #typo-2 h1 { font-size: 1.2rem; }
     #About .about-container .about-main .about-text { padding: 60px 40px; }
-    #About .about-container #typo-3 { font-size: 0.8rem; }    
-    #About .about-container #typo-3 .tag-wrap .tag { padding: 8px 14px; }      
+    #About .about-container .about-main .about-text #typo-3 { font-size: 0.8rem; }    
+    #About .about-container .about-main .about-text #typo-3 .tag-wrap .tag { padding: 8px 14px; }      
 }
 
 @media screen and (max-width: 575px) {    
     #About .about-container .about-title > h1 { font-size: 1.5rem; }
-    #About .about-container #typo-2 h1 { font-size: 0.7rem; }
+    #About .about-container .about-main-title #typo-2 h1 { font-size: 0.7rem; }
     #About .about-container .about-main-title { padding-bottom: 10px; }
     #About .about-container .about-main .about-text { padding: 30px 20px; }
-    #About .about-container #typo-3 { font-size: 0.6rem; }    
-    #About .about-container #typo-3 .tag-wrap .tag { padding: 7px 14px; }      
+    #About .about-container .about-main .about-text #typo-3 { font-size: 0.6rem; }    
+    #About .about-container .about-main .about-text #typo-3 .tag-wrap .tag { padding: 7px 14px; }      
 }
 /* Stacks */
 #Stacks { background: rgb(15, 15, 15); display: flex; justify-content: center; width:100%; } 
@@ -148,7 +148,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #Stacks .stacks-container .stacks-title h1 { text-align: center; font-size: 2.5rem; font-weight: 900; width:100%; }
 #Stacks .stacks-container .stacks-title h2 { text-align: center; font-size: 1.0rem; font-weight: 400; }
 #Stacks .stacks-container .stack-container { display:flex; align-items: center; gap: 100px; position: relative;}
-#Stacks .stacks-container .stack-container .stack-title { font-size: 1.5rem; font-weight: 500; background: #4c4c4cae; padding: 10px 15px; border-radius: 10px; width: 180px; text-align: center; }
+#Stacks .stacks-container .stack-container .stack-title { font-size: 1.5rem; font-weight: 500; background: #a6a2a3b8; padding: 10px 15px; border-radius: 10px; width: 180px; text-align: center; }
 #Stacks .stacks-container .stack-container ul { display:flex; gap: 40px; width: 818px; }
 #Stacks .stacks-container .stack-container ul li { display:flex; gap: 40px; align-items: center; justify-content: center; padding:30px ; border: 1px solid #555454; border-radius: 10px; position: relative; transition: all 0.3s ease; overflow: hidden; background: rgb(39, 39, 39);}
 #Stacks .stacks-container .stack-container ul li:hover {padding-right: 200px;}
@@ -291,7 +291,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 @media screen and (max-width: 575px) {
-    #Contact .contact-container { gap: 180px; }
+    #Contact .contact-container { gap: 170px; }
     #Contact .contact-container .contact-title h1 { font-size: 1.5rem; }
     #Contact .contact-container .contact-main .contact-wrap p { font-size: 1.0rem;}
     #Contact .contact-container .contact-bottom { font-size: 0.8rem; }
