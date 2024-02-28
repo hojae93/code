@@ -109,7 +109,7 @@ window.addEventListener('scroll', function(){
 document.addEventListener("touchstart", function() {}, true);
 
 // stack li 메뉴들 클릭시 이동 금지
-document.querySelectorAll('.stack-main li').forEach(function(item) {
+document.querySelectorAll('.a-prevent li').forEach(function(item) {
     item.addEventListener('click', function(e) {
         e.preventDefault();
     });

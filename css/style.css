@@ -148,7 +148,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 #Stacks .stacks-container .stacks-title h1 { text-align: center; font-size: 2.5rem; font-weight: 900; width:100%; }
 #Stacks .stacks-container .stacks-title h2 { text-align: center; font-size: 1.0rem; font-weight: 400; }
 #Stacks .stacks-container .stack-container { display:flex; align-items: center; gap: 100px; position: relative;}
-#Stacks .stacks-container .stack-container .stack-title { font-size: 1.5rem; font-weight: 500; background: #a6a2a3b8; padding: 10px 15px; border-radius: 10px; width: 180px; text-align: center; }
+#Stacks .stacks-container .stack-container .stack-title { font-size: 1.5rem; font-weight: 800; padding: 10px 15px; width: 200px; text-align: center; }
 #Stacks .stacks-container .stack-container ul { display:flex; gap: 40px; width: 818px; }
 #Stacks .stacks-container .stack-container ul li { display:flex; gap: 40px; align-items: center; justify-content: center; padding:30px ; border: 1px solid #555454; border-radius: 10px; position: relative; transition: all 0.3s ease; overflow: hidden; background: rgb(39, 39, 39);}
 #Stacks .stacks-container .stack-container ul li:hover {padding-right: 200px;}
@@ -180,7 +180,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
     #Stacks .stacks-container .stacks-title h1 { font-size: 1.8rem; }
     #Stacks .stacks-container .stacks-title h2 { font-size: 0.9rem; }
     #Stacks .stacks-container .stack-container .stack-title { font-size: 1.0rem; }
-    #Stacks .stacks-container .stack-container ul { flex-direction: column; width: 220px; }
+    #Stacks .stacks-container .stack-container ul { flex-direction: column; width: 280px; }
     #Stacks .stacks-container .stack-container ul li { justify-content: unset; padding-right: 250px; }
     #Stacks .stacks-container .stack-container ul li a img { width: 30px; height: 30px; }
     #Stacks .stacks-container .stack-container ul li .stack-text {left: 80px;}
@@ -192,7 +192,7 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 
 @media screen and (max-width: 575px) {
     #Stacks .stacks-container { gap: 80px; }
-    #Stacks .stacks-container .stack-container ul { width: 185px; }
+    #Stacks .stacks-container .stack-container ul { width: 190px; }
     #Stacks .stacks-container .stack-container ul li { padding: 15px;}
     #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 0.8rem; font-weight: 800; } 
     #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.5rem; font-weight: 400; }
@@ -256,7 +256,9 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 }
 
 @media screen and (max-width: 767px) {
-    #works .swiper-container { max-width: 400px; } 
+    #works .swiper-container { max-width: 400px; }
+    #works .works-container .works-title> h1 { font-size: 1.8rem; } 
+    #works .works-container .works-title> h2 { font-size: 0.9rem; }
     #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap {gap: 15px;}
     #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title h1 { font-size: 1.5rem; }
     #works .swiper-content .swiper-wrapper .swiper-slide .swiper-text-container .swiper-text-wrap .swiper-text-title p { font-size: 0.8rem; }
