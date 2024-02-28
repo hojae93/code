@@ -108,6 +108,13 @@ window.addEventListener('scroll', function(){
 // 모바일화면에서 터치시 호버와 같은 효과
 document.addEventListener("touchstart", function() {}, true);
 
+// stack li 메뉴들 클릭시 이동 금지
+document.querySelectorAll('.stack-main li').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+    });
+});
+
     
 
 

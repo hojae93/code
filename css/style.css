@@ -175,26 +175,31 @@ header .header-container .menu ul .nav-hamburger.open span:last-child { transfor
 
 @media screen and (max-width: 767px) {
     #Stacks { height: 150vh; } 
-    #Stacks .stacks-container { gap: 80px; min-width: 272px;}
+    #Stacks .stacks-container { gap: 50px; min-width: 272px;}
+    #Stacks .stacks-container .stack-container { gap: 50px; }
     #Stacks .stacks-container .stacks-title h1 { font-size: 1.8rem; }
     #Stacks .stacks-container .stacks-title h2 { font-size: 0.9rem; }
     #Stacks .stacks-container .stack-container .stack-title { font-size: 1.0rem; }
-    #Stacks .stacks-container .stack-container ul { flex-direction: column; width: 90px; }
-    #Stacks .stacks-container .stack-container ul li { justify-content: unset; }
+    #Stacks .stacks-container .stack-container ul { flex-direction: column; width: 220px; }
+    #Stacks .stacks-container .stack-container ul li { justify-content: unset; padding-right: 250px; }
     #Stacks .stacks-container .stack-container ul li a img { width: 30px; height: 30px; }
-    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 220px; }
-    #Stacks .stacks-container .stack-container ul li:hover .stack-text { left: 70px; }
+    #Stacks .stacks-container .stack-container ul li .stack-text {left: 80px;}
+    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 250px; }
+    #Stacks .stacks-container .stack-container ul li:hover .stack-text { left: 80px; }
     #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 1.0rem; font-weight: 800; }  
     #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.8rem; font-weight: 400; } 
 }
 
-@media screen and (max-width: 767px) {
-    #Stacks .stacks-container .stack-container ul { width: 60px; }
+@media screen and (max-width: 575px) {
+    #Stacks .stacks-container { gap: 80px; }
+    #Stacks .stacks-container .stack-container ul { width: 185px; }
     #Stacks .stacks-container .stack-container ul li { padding: 15px;}
     #Stacks .stacks-container .stack-container ul li .stack-text p:first-child { font-size: 0.8rem; font-weight: 800; } 
     #Stacks .stacks-container .stack-container ul li .stack-text p:last-child { font-size: 0.5rem; font-weight: 400; }
-    #Stacks .stacks-container .stack-container ul li:hover .stack-text { left: 50px; width: 120px; }
-    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 160px; }
+    #Stacks .stacks-container .stack-container ul li { width: 160px; }
+    #Stacks .stacks-container .stack-container ul li .stack-text {left: 50px; width: 130px;}
+    #Stacks .stacks-container .stack-container ul li:hover .stack-text { left: 50px; }
+    #Stacks .stacks-container .stack-container ul li:hover { padding-right: 15px; }
 }
 
 /* Works */
