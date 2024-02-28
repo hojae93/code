@@ -28,11 +28,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 모바일 햄버거 메뉴 
 var hamburger = document.querySelector('.nav-hamburger');
+var modal = document.querySelector('#mb-menu');
 function toggleMenu() {    
     hamburger.classList.toggle('open');
-    document.querySelector('#mb-menu').classList.toggle('opening');
+    modal.classList.toggle('opening');
 }
 hamburger.addEventListener('click', toggleMenu);
+
+// 모달 닫기
+modal.onclick = function(event) {
+    if (event.target == modal) {
+      modal.classList.remove('opening')
+    }
+  };
+
+// 모바일에서 메뉴 선택시 그 항목 메뉴로 이동
+var listItems = document.querySelectorAll('#mb-menu li');
+
+listItems.forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    var targetId = event.target.getAttribute('href');
+    modal.classList.remove('opening')
+    window.location.href = targetId; // 해당 ID로 이동
+  });
+});
 
 // 진척도 + 나타나기 
 window.addEventListener('scroll', function(){
